@@ -329,6 +329,35 @@
 <!-- ABOUT PAGE -->
 <div id="page-about" class="page about-page">
 
+  <div class="ticker">
+    <div class="ticker-inner">
+            <span>Commissions Open</span><span class="dot">.</span>
+      <span>Bergen, Norway</span><span class="dot">.</span>
+      <span>Film &amp; Digital Photography</span><span class="dot">.</span>
+      <span>Landscape</span><span class="dot">.</span>
+      <span>Action Sports</span><span class="dot">.</span>
+      <span>Fine Art Prints</span><span class="dot">.</span>
+            <span>Commissions Open</span><span class="dot">.</span>
+      <span>Bergen, Norway</span><span class="dot">.</span>
+      <span>Film &amp; Digital Photography</span><span class="dot">.</span>
+      <span>Landscape</span><span class="dot">.</span>
+      <span>Action Sports</span><span class="dot">.</span>
+      <span>Fine Art Prints</span><span class="dot">.</span>
+            <span>Commissions Open</span><span class="dot">.</span>
+      <span>Bergen, Norway</span><span class="dot">.</span>
+      <span>Film &amp; Digital Photography</span><span class="dot">.</span>
+      <span>Landscape</span><span class="dot">.</span>
+      <span>Action Sports</span><span class="dot">.</span>
+      <span>Fine Art Prints</span><span class="dot">.</span>
+            <span>Commissions Open</span><span class="dot">.</span>
+      <span>Bergen, Norway</span><span class="dot">.</span>
+      <span>Film &amp; Digital Photography</span><span class="dot">.</span>
+      <span>Landscape</span><span class="dot">.</span>
+      <span>Action Sports</span><span class="dot">.</span>
+      <span>Fine Art Prints</span><span class="dot">.</span>
+    </div>
+  </div>
+
   <div class="about-wrap">
 
     <div class="about-visual">
@@ -369,7 +398,7 @@
         <div class="about-section-label">Contact</div>
         <div class="cd-row">
           <span class="cd-label">Email</span>
-          <span class="cd-value"><a href="/cdn-cgi/l/email-protection#c5a2b7acb5b5acaba2b1ada0a2b7a4acabebb5adaab1aaa2b7a4b5adbc85a2a8a4aca9eba6aaa8"><span class="__cf_email__" data-cfemail="492e3b20393920272e3d212c2e3b282027673921263d262e3b28392130092e24282025672a2624">grippingthegrain.photography@gmail.com</span></a></span>
+          <span class="cd-value"><a href="/cdn-cgi/l/email-protection#c5a2b7acb5b5acaba2b1ada0a2b7a4acabebb5adaab1aaa2b7a4b5adbc85a2a8a4aca9eba6aaa8"><span class="__cf_email__" data-cfemail="492e3b20393920272e3d212c2e3b282027673921263d262e3b28392130092e24282025672a2624"><span class="__cf_email__" data-cfemail="4e293c273e3e2720293a262b293c2f2720603e26213a21293c2f3e26370e29232f2722602d2123">[email&#160;protected]</span></span></a></span>
         </div>
         <div class="cd-row">
           <span class="cd-label">Based in</span>
@@ -426,7 +455,7 @@
   </div>
 
   <div class="page-foot">
-    <span>James Kowalski Photography</span>
+    <span>James Kowalski — About</span>
     <span>© 2026 — All rights reserved</span>
   </div>
 
@@ -451,7 +480,7 @@
 
 <html lang="en">
 <head>
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
   // Declare all functions globally so onclick attributes can find them
   var lbItems = [];
   var lbIndex = 0;
@@ -630,7 +659,7 @@
     /* ════════════════════════
        GALLERY PAGE
     ════════════════════════ */
-    .gallery-page { padding-top: 56px; }
+    .gallery-page { padding-top: 78px; }
 
     .ticker {
       border-bottom: 1px solid var(--border);
@@ -638,6 +667,8 @@
       overflow: hidden;
       white-space: nowrap;
       padding: 8px 0;
+      width: 100%;
+      box-sizing: border-box;
     }
 
     .ticker-inner {
@@ -676,7 +707,12 @@
     }
 
     @media (max-width: 860px) { .masonry { columns: 2; } }
-    @media (max-width: 480px) { .masonry { columns: 1; } }
+    @media (max-width: 480px) {
+      .masonry { columns: 1; }
+      .m-item.break { break-before: auto; }
+      .m-item.featured-2 { column-span: unset; max-height: none; }
+      .m-item.featured-2 img { max-height: none; }
+    }
 
     .m-item.break { break-before: column; }
     .m-item.featured-2 { column-span: all; max-height: 70vh; }
@@ -877,12 +913,13 @@
     /* ════════════════════════
        ABOUT PAGE
     ════════════════════════ */
-    .about-page { padding-top: 56px; }
+    .about-page { padding-top: 78px; }
 
     .about-wrap {
       display: grid;
       grid-template-columns: 1fr 1.2fr 1fr;
       min-height: calc(100vh - 56px);
+      margin-top: 30px;
     }
 
     @media (max-width: 900px) { .about-wrap { grid-template-columns: 1fr; } }
@@ -938,7 +975,6 @@
       display: flex;
       flex-direction: column;
       padding: 52px 48px 60px;
-      border-top: 1px solid var(--border);
       overflow-y: auto;
     }
 
@@ -1146,6 +1182,10 @@
       .nav-logo { font-size: 1.3rem; }
       .nav-links a { padding: 6px 14px; font-size: 0.56rem; }
       .gallery-foot { padding: 12px 20px; }
+      .gallery-page { padding-top: 60px; }
+      .form-row { grid-template-columns: 1fr; }
+      .form-row .field:first-child { border-right: none; padding-right: 0; }
+      .form-row .field:last-child { padding-left: 0; }
     }
   
     /* ════════════════════════
@@ -1231,23 +1271,11 @@
       transition: background 0.25s, transform 0.2s;
       line-height: 1;
       white-space: nowrap;
-    }
-
-    .btn-portal:hover {
-      background: #c96fff;
-      transform: translateY(-2px);
-    }
-
-    .btn-portal:active {
-      transform: translateY(0);
-    }
-
-  </style>
-</head>
-<body>
-
-<!-- NAV -->
-
-
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape')     closeLb();
+    if (e.key === 'ArrowRight') stepLb(1);
+    if (e.key === 'ArrowLeft')  stepLb(-1);
+  });
+</script>
 </body>
 </html>
